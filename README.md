@@ -18,12 +18,10 @@ The framework calls the hook ```lesshooks``` when it's successfully loaded. So t
 
 ```php 
 // Wait for framework too load.
-add_action( 'lesshooks', 'init_my_plugin' );
-
-function init_my_plugin() {
+add_action( 'lesshooks', function() {
 	// Create a post type for "Coupons".
 	Posttype::create( 'Coupons', 'coupons' );
-}
+});
 ```
 
 
@@ -158,13 +156,10 @@ $coupons = Posttype::create( 'Coupons', 'coupons' );
  * @param callback $callback_function (required)
 */
 
-$coupons->add_admin_column( 'Post ID', 'coupons_column_shortcode' );
-
-// Admin column callback.
-function coupons_column_shortcode( $post ) {
+$coupons->add_admin_column( 'Post ID', function( $post ) {
 	$post_id = $post->ID; // $post references to the current row.
 	return "ID: {$post_id}";
-}
+});
 ```
 
 ![add_admin_column](https://cloud.githubusercontent.com/assets/2277443/21963534/ef5693e4-db3c-11e6-93ba-c80ccff6abee.png)
