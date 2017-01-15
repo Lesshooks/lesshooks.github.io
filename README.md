@@ -71,6 +71,7 @@ Notice::information( 'This is a <strong>HTML-formatted</strong> message', true, 
  
 #### Create a post type
  
+ 
 ```php 
 /** 
  * Register a Post Type
