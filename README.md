@@ -16,9 +16,7 @@
 ## Installation & Usage
 The framework calls the hook ```lesshooks``` when it's successfully loaded. So to make sure that Lesshooks Framework is installed and loaded before your code, you should **ALWAYS** wait for the ```lesshooks```-hook before calling any Lesshooks Framework classes.
 
-**Example:**
- 
-```php
+```php 
 // Wait for framework too load.
 add_action( 'lesshooks', 'init_my_plugin' );
 
