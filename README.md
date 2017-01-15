@@ -68,8 +68,10 @@ Notice::information( 'This is a <strong>HTML-formatted</strong> message', true, 
 
 
 ## Post Types
+ 
 #### Create a post type
-```php
+ 
+```php 
 /** 
  * Register a Post Type
  * @param $title (required)
@@ -80,7 +82,9 @@ Notice::information( 'This is a <strong>HTML-formatted</strong> message', true, 
 // Create a post type for "Coupons".
 Posttype::create( 'Coupons', 'coupons' );
 ```
+ 
 #### Set arguments for your post type
+ 
 ```php
 /**
  * Register arguments for your post type
@@ -102,7 +106,8 @@ $coupons->set( 'rewrite', array( 'slug' => 'coupons' ) );
 ```
 
 #### Set labels for your post type
-```php
+ 
+```php 
 // Create a post type for "Coupons".
 $coupons = Posttype::create( 'Coupons', 'coupons' );
 
@@ -138,7 +143,8 @@ $coupons->set('labels', array(
 ));
 ```
 
-#### Add an admin column for your post type.
+#### Add an admin column for your post type. 
+ 
 ```php
 // Create a post type for "Coupons".
 $coupons = Posttype::create( 'Coupons', 'coupons' );
@@ -162,8 +168,9 @@ function coupons_column_shortcode( $post ) {
 
 ![add_admin_column](https://cloud.githubusercontent.com/assets/2277443/21963534/ef5693e4-db3c-11e6-93ba-c80ccff6abee.png)
 
-#### Remove an admin column for your post type.
-```php
+#### Remove an admin column for your post type. 
+ 
+```php 
 // Create a post type for "Coupons".
 $coupons = Posttype::create( 'Coupons', 'coupons' );
 
